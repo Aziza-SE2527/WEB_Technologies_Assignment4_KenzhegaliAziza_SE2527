@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Часть 2 - Bootstrap Формы</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #fff0f3; }
+        .navbar { background-color: #d87093 !important; }
+        .card { border: none; border-radius: 15px; box-shadow: 0 4px 15px rgba(219, 112, 147, 0.15); }
+        .btn-primary { background-color: #db7093; border-color: #db7093; }
+        .btn-primary:hover { background-color: #c71585; border-color: #c71585; }
+        h3 { color: #c71585; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">🌸 Assignment #4</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Main</a></li>
+                    <li class="nav-item"><a class="nav-link" href="part1.html">part 1</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="part2.html">part 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="part3.html">part 3</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="card p-4 mx-auto" style="max-width: 700px;">
+            <h3 class="mb-3 text-center">Task 2 & 3: Bootstrap Validation</h3>
+            <p class="text-muted text-center small mb-4">Red and green commnets</p>
+
+            <form class="row g-3 needs-validation" novalidate>
+                <div class="col-md-6">
+                    <label for="bName" class="form-label fw-semibold">Name</label>
+                    <input type="text" class="form-control" id="bName" required>
+                    <div class="valid-feedback">Yoyyy</div>
+                    <div class="invalid-feedback">Pls, enter your name</div>
+                </div>
+                <div class="col-md-6">
+                    <label for="bEmail" class="form-label fw-semibold">Email</label>
+                    <input type="email" class="form-control" id="bEmail" required>
+                    <div class="valid-feedback">Yooy Yoooy</div>
+                    <div class="invalid-feedback">Double check,bruh</div>
+                </div>
+                <div class="col-12">
+                    <label for="bMsg" class="form-label fw-semibold">Message</label>
+                    <textarea class="form-control" id="bMsg" rows="3" required></textarea>
+                    <div class="invalid-feedback">Write your messege</div>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-primary w-100" type="submit">Send yoy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        (() => {
+            'use strict'
+            const forms = document.querySelectorAll('.needs-validation')
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

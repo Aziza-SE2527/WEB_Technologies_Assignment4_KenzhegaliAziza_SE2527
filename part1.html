@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Часть 1 - basic forms</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #fff0f3; }
+        .navbar { background-color: #d87093 !important; }
+        .card { border: none; border-radius: 15px; box-shadow: 0 4px 15px rgba(219, 112, 147, 0.15); }
+        .btn-primary { background-color: #db7093; border-color: #db7093; }
+        .btn-primary:hover { background-color: #c71585; border-color: #c71585; }
+        h3 { color: #c71585; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">🌸 Assignment #4</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Main</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="part1.html">Part 1
+                    </a></li>
+                    <li class="nav-item"><a class="nav-link" href="part2.html">Part 2
+                    </a></li>
+                    <li class="nav-item"><a class="nav-link" href="part3.html">Part 3</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="card p-4 mx-auto" style="max-width: 600px;">
+            <h3 class="mb-3 text-center">Task 0 & 1: Simple forms</h3>
+            <p class="text-muted text-center small mb-4">Check the comments(hints) from browser when u input incorrect email</p>
+            
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label fw-semibold">Name:</label>
+                    <input type="text" class="form-control" id="name" required placeholder="Enter your name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label fw-semibold">Email:</label>
+                    <input type="email" class="form-control" id="email" required placeholder="name@example.com">
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label fw-semibold">Comment:</label>
+                    <textarea class="form-control" id="message" rows="3" required placeholder="Just say smth"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

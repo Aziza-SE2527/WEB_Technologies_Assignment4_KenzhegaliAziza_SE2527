@@ -1,0 +1,41 @@
+/* style.css — Розово-белая тема */
+
+body {
+    background-color: #fff0f3;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #5c4033;
+}
+
+.navbar {
+    background-color: #d87093 !important;
+}
+
+.navbar-brand, .nav-link {
+    color: #ffffff !important;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #ffe4e1 !important;
+    font-weight: 600;
+}
+
+.card {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(219, 112, 147, 0.15);
+}
+
+.btn-primary {
+    background-color: #db7093;
+    border-color: #db7093;
+}
+
+.btn-primary:hover {
+    background-color: #c71585;
+    border-color: #c71585;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #c71585;
+}
